@@ -9,7 +9,7 @@ on:
 # These are used for the Container registry domain, and a name for the Docker image that this workflow builds.
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: mja-71/ubuntu-qt-dev:0.1
+  IMAGE_NAME: mja-71/ubuntu-qt-dev
 
 
 # There is a single job in this workflow. 
