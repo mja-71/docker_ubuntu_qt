@@ -21,5 +21,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: echo   
       run: docker build . --file Dockerfile --tag env.IMAGE_NAME
