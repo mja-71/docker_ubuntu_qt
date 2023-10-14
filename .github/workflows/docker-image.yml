@@ -1,8 +1,14 @@
 name: Docker Image CI
 
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: mja-71/library/ubuntu_qt_dev:1.0
+
 on:
   push:
-    branches: [ "main" ]
+    branches: 
+    - 'main'
+    - 'release/**'
   pull_request:
     branches: [ "main" ]
 
@@ -15,4 +21,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ubuntu_qt_dev:$(date +%s)
+      run: echo   
+      run: docker build . --file Dockerfile --tag env.IMAGE_NAME
